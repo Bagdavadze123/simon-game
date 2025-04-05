@@ -14,7 +14,13 @@ $(document).keypress(function(){
         started = true;
     }
 });
-
+$(document).click(function(){
+    if(!started){
+        $("#level-title").text("Level "+ level);
+        nextSequance();
+        started = true;
+    }
+});
 function checkAnswer(currentLevel){
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
 
